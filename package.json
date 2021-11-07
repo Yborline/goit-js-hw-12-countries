@@ -1,0 +1,27 @@
+{
+  "name": "goit-js-hw-12-countries",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html ",
+ "predeploy": "npm run build  --public-url /goit-js-hw-12-countries/",
+    "deploy": "gh-pages -d dist"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yborline/goit-js-hw-12-countries.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yborline/goit-js-hw-12-countries/issues"
+  },
+  "homepage": "https://github.com/Yborline/goit-js-hw-12-countries#readme",
+  "dependencies": {
+    "parcel": "^2.0.0",
+    "posthtml-include": "^1.7.2",
+    "sass": "^1.43.4"
+  }
+}
