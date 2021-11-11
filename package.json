@@ -2,7 +2,7 @@
   "name": "goit-js-hw-12-countries",
   "version": "1.1.0",
   "description": "hw-10",
-  "main": "index.js",
+
   "homepage": "https://Yborline.github.io/goit-js-hw-12-countries",
   "scripts": {
     "dev": "parcel src/*.html",
