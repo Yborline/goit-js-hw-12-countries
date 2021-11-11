@@ -1,13 +1,14 @@
 {
   "name": "goit-js-hw-12-countries",
   "version": "1.1.0",
-  "description": "hw-10",
+  "description": "hw-12",
   "homepage": "https://Yborline.github.io/goit-js-hw-12-countries",
   "scripts": {
+    "start": "node index.js",
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-12-countries/",
-    "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build"
+    "build": "parcel build src/*.html --no-minify",
+    "predeploy": "npm run build  --public-url /goit-js-hw-12-countries/",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -20,16 +21,15 @@
     "url": "https://github.com/Yborline//goit-js-hw-12-countries/issues"
   },
   "dependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
     "@pnotify/animate": "^5.2.0",
     "@pnotify/core": "^5.2.0",
     "@pnotify/desktop": "^5.2.0",
     "animate.css": "^4.1.1",
     "gh-pages": "^3.2.3",
-    "handlebars": "^4.7.7",
     "lodash.debounce": "^4.0.8",
-    "parcel": "^2.0.1",
+    "parcel-bundler": "^1.12.5",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
-    "parcel-plugin-nuke-dist": "^1.0.1",
     "posthtml-include": "^1.7.2",
     "sass": "^1.43.4"
   }
