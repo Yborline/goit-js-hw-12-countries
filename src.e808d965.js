@@ -2383,25 +2383,23 @@ const templateFunction = _handlebars.default.template({
 
 var _default = templateFunction;
 exports.default = _default;
-},{"handlebars/dist/handlebars.runtime":"pAws"}],"irxn":[function(require,module,exports) {
+},{"handlebars/dist/handlebars.runtime":"pAws"}],"spyz":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-const BASE_URL = 'https://restcountries.com/v2/name/';
 var _default = {
   fetchCountry
 };
 exports.default = _default;
 
 function fetchCountry(nameCountry) {
-  const response = fetch(`${BASE_URL}${nameCountry}`);
-  return fetch(response).then(response => {
-    return response.json();
-  });
+  return fetch(`${BASE_URL}${nameCountry}`).then(r => r.json); // return  response.json();
 }
+
+const BASE_URL = 'https://restcountries.com/v2/name/';
 },{}],"txz9":[function(require,module,exports) {
 var define;
 var global = arguments[3];
@@ -2815,7 +2813,7 @@ var _countryTemplates = _interopRequireDefault(require("./templates/countryTempl
 
 var _countryList = _interopRequireDefault(require("./templates/countryList.hbs"));
 
-var _fetchCountries = _interopRequireDefault(require("./js/fetchCountries"));
+var _fetch = _interopRequireDefault(require("./js/fetch"));
 
 var _core = require("@pnotify/core");
 
@@ -2841,9 +2839,9 @@ function onSearch() {
   }
 
   onCliearInput();
-  const searchQuery = refs.inputRef.value.trim();
+  const searchQuery = refs.inputRef.value;
 
-  _fetchCountries.default.fetchCountry(searchQuery).then(country => {
+  _fetch.default.fetchCountry(searchQuery).then(country => {
     if (country.length > 10) {
       (0, _core.error)({
         text: 'Too many matches found. Please enter a more specific query!'
@@ -2852,10 +2850,10 @@ function onSearch() {
       (0, _core.error)({
         text: 'Please enter the correct name'
       });
-    } else if (country.length === 1) {
-      onCriateCountryCard(country);
     } else if (country.length <= 10) {
       onCriateCountryList(country);
+    } else if (country.length === 1) {
+      onCriateCountryCard(country);
     }
   }).catch(onFetchError);
 }
@@ -2878,5 +2876,5 @@ function onCliearInput() {
   refs.containerRef.innerHTML = '';
   refs.countryListRef.innerHTML = '';
 }
-},{"../src/sass/styles.scss":"FEvW","./templates/countryTemplates.hbs":"feml","./templates/countryList.hbs":"uswH","./js/fetchCountries":"irxn","@pnotify/core":"txz9","./js/refs":"VyiV","@pnotify/core/dist/PNotify.css":"FEvW","@pnotify/desktop/dist/PNotifyDesktop":"R69c","@pnotify/core/dist/BrightTheme.css":"FEvW","lodash.debounce":"PZFh"}]},{},["Focm"], null)
-//# sourceMappingURL=/src.20fce6f7.js.map
+},{"../src/sass/styles.scss":"FEvW","./templates/countryTemplates.hbs":"feml","./templates/countryList.hbs":"uswH","./js/fetch":"spyz","@pnotify/core":"txz9","./js/refs":"VyiV","@pnotify/core/dist/PNotify.css":"FEvW","@pnotify/desktop/dist/PNotifyDesktop":"R69c","@pnotify/core/dist/BrightTheme.css":"FEvW","lodash.debounce":"PZFh"}]},{},["Focm"], null)
+//# sourceMappingURL=/src.e808d965.js.map
