@@ -1,32 +1,38 @@
 {
   "name": "goit-js-hw-12-countries",
   "version": "1.1.0",
+  "description": "hw-10",
   "main": "index.js",
-  "homepage": "https://Yborline.github.io/goit-js-hw-12-countries/",
+  "homepage": "https://Yborline.github.io/goit-js-hw-12-countries",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/index.html --public-url /goit-js-hw-12-countries/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-12-countries/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Yborline/goit-js-hw-12-countries.git"
   },
   "keywords": [],
-  "author": "Yborline <alexander.repeta@gmail.com>",
-  "license": "ISC",
+  "author": "Yborline",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Yborline/goit-js-hw-12-countries/issues"
+    "url": "https://github.com/Yborline//goit-js-hw-12-countries/issues"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "@pnotify/animate": "^5.2.0",
+    "@pnotify/core": "^5.2.0",
+    "@pnotify/desktop": "^5.2.0",
+    "animate.css": "^4.1.1",
+    "gh-pages": "^3.2.3",
+    "handlebars": "^4.7.7",
+    "lodash.debounce": "^4.0.8",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1",
-    "pnotify": "^5.2.0",
-    "posthtml-include": "^1.6.2",
-    "sass": "^1.32.8"
-  },
-  "dependencies": {
-    "lodash.debounce": "^4.0.8"
-  },
-  "description": ""
+    "posthtml-include": "^1.7.2",
+    "sass": "^1.43.4"
+  }
 }
