@@ -1,0 +1,48 @@
+body {
+  justify-content: center;
+  align-items: center;
+  background-color: azure;
+  font-family: 'Josefin+Sans';
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.main-container {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.country-input {
+  width: 400px;
+  border-radius: 15px;
+  height: 50px;
+  border: 3px solid rgb(123, 226, 181);
+}
+
+.image {
+  width: 400px;
+  height: 350px;
+  margin-left: 60px;
+}
+
+.country-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.country-info-list,
+.smol-name {
+  list-style: none;
+}
+
+.country-info-list-item-title {
+  font-weight: bold;
+}
+
+.country-info-list-item {
+  display: flex;
+}
