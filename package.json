@@ -2,7 +2,6 @@
   "name": "goit-js-hw-12-countries",
   "version": "1.1.0",
   "description": "hw-10",
-
   "homepage": "https://Yborline.github.io/goit-js-hw-12-countries",
   "scripts": {
     "dev": "parcel src/*.html",
@@ -20,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/Yborline//goit-js-hw-12-countries/issues"
   },
-  "devDependencies": {},
   "dependencies": {
     "@pnotify/animate": "^5.2.0",
     "@pnotify/core": "^5.2.0",
@@ -29,7 +27,7 @@
     "gh-pages": "^3.2.3",
     "handlebars": "^4.7.7",
     "lodash.debounce": "^4.0.8",
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.0.1",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1",
     "posthtml-include": "^1.7.2",
